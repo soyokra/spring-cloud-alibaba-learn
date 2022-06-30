@@ -15,16 +15,16 @@
     <name>spring-cloud-alibaba-domain</name>
 
     <modules>
-        <module>spring-cloud-alibaba-call-contract</module>
-        <module>spring-cloud-alibaba-product</module>
+        <module>spring-cloud-alibaba-kernel</module>
         <module>spring-cloud-alibaba-order</module>
+        <module>spring-cloud-alibaba-product</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.soyokra.learn</groupId>
-                <artifactId>spring-cloud-alibaba-call-contract</artifactId>
+                <artifactId>spring-cloud-alibaba-kernel</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

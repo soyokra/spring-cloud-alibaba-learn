@@ -15,9 +15,11 @@ spring:
 
 dubbo:
   scan:
-    base-packages: com.soyokra.learn.product.rpc.provider.contract
+    base-packages: com.soyokra.learn.product.rpc.provider
   protocol:
     name: dubbo
     port: -1
   registry:
     address:  spring-cloud://localhost
+  cloud:
+    subscribed-services: app-server-domain-order

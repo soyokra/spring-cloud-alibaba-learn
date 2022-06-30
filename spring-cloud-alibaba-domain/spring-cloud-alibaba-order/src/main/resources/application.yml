@@ -12,3 +12,14 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+
+dubbo:
+  scan:
+    base-packages: com.soyokra.learn.order.rpc.provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address:  spring-cloud://localhost
+  cloud:
+    subscribed-services: app-server-domain-product

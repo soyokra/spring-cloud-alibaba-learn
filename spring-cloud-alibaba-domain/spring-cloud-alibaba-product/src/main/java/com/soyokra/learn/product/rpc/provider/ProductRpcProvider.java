@@ -1,6 +1,6 @@
 package com.soyokra.learn.product.rpc.provider;
 
-import com.soyokra.learn.call.rpc.ProductRpcContract;
+import com.soyokra.learn.kernel.support.rpc.ProductRpcContract;
 import org.apache.dubbo.config.annotation.DubboService;
 
 @DubboService
@@ -8,5 +8,10 @@ public class ProductRpcProvider implements ProductRpcContract {
     @Override
     public String info(String tags) {
         return "product tags: " + tags;
+    }
+
+    @Override
+    public String getProductId() {
+        return "this tis product id";
     }
 }

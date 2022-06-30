@@ -38,7 +38,7 @@
 
         <dependency>
             <groupId>com.soyokra.learn</groupId>
-            <artifactId>spring-cloud-alibaba-call-contract</artifactId>
+            <artifactId>spring-cloud-alibaba-kernel</artifactId>
         </dependency>
     </dependencies>
 
