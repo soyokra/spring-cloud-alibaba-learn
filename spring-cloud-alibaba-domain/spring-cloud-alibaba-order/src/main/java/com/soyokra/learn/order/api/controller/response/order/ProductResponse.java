@@ -1,4 +1,4 @@
-package com.soyokra.learn.order.api.controller.response.product;
+package com.soyokra.learn.order.api.controller.response.order;
 
 import lombok.Data;
 

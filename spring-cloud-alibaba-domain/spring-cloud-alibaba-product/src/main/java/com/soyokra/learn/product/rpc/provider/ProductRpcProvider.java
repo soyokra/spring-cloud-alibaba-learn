@@ -7,11 +7,11 @@ import org.apache.dubbo.config.annotation.DubboService;
 public class ProductRpcProvider implements ProductRpcContract {
     @Override
     public String info(String tags) {
-        return "product tags: " + tags;
+        return "order tags: " + tags;
     }
 
     @Override
     public String getProductId() {
-        return "this tis product id";
+        return "this tis order id";
     }
 }

@@ -2,7 +2,7 @@ package com.soyokra.learn.order.api.controller;
 
 import com.soyokra.learn.kernel.support.rpc.ProductRpcContract;
 import com.soyokra.learn.kernel.support.utils.ResponseUtils;
-import com.soyokra.learn.order.api.controller.response.product.ProductResponse;
+import com.soyokra.learn.order.api.controller.response.order.ProductResponse;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

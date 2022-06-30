@@ -22,4 +22,4 @@ dubbo:
   registry:
     address:  spring-cloud://localhost
   cloud:
-    subscribed-services: app-server-domain-product
+    subscribed-services: app-server-domain-order
