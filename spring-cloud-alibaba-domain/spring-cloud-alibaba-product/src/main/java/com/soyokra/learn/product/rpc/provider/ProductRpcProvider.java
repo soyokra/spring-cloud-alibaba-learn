@@ -1,6 +1,6 @@
 package com.soyokra.learn.product.rpc.provider;
 
-import com.soyokra.learn.product.rpc.provider.contract.ProductRpcContract;
+import com.soyokra.learn.call.rpc.ProductRpcContract;
 import org.apache.dubbo.config.annotation.DubboService;
 
 @DubboService

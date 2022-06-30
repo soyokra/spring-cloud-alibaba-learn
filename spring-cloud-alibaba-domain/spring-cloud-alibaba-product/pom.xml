@@ -35,6 +35,11 @@
             <artifactId>spring-context-support</artifactId>
             <version>1.0.11</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.soyokra.learn</groupId>
+            <artifactId>spring-cloud-alibaba-call-contract</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
