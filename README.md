@@ -4,29 +4,31 @@
 
 ## 快速开始
 
-#### 安装nacos服务
+### 安装nacos服务
 ```shell
  docker run --name nacos-quick -e MODE=standalone -p 8848:8848 -p 9848:9848 -d nacos/nacos-server:2.0.3
 ```
 
-> 关于9848端口问题
-> 
-> 环境：Nacos版本 2.0.3，docker镜像，M1 Mac 
-> 
-> 问题描述：页面访问正常，curl -X POST正常，但是使用Java SDK集成发布失败
->
-> 原因定位：跟踪源码，异常描述： Client not connected,current status:STARTING，客户端gRPC无法和服务端创建链接，在Nacos2.X版本中，增加了gRPC通信端口，需要由docker一并映射出来，否则就会出现无法初始化连接。
->
-> 解决方案：在docker容器中映射9848端口
+### 启动
+> 启动Domain领域服务
 
+## Q&A
+### 1. 9848端口问题
+Question:
+> Correct the classpath of your application so that it contains a single, compatible version of org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor
 
-#### spring-cloud-dubbo启动问题
-> An attempt was made to call a method that does not exist. The attempt was made from the following location:
+Answer:
+> 在Nacos2.X版本中，增加了gRPC通信端口，需要由docker一并映射出来，例如：```-p 9848:9848```， 否则就会出现无法初始化连接。
+
+### 2. dubbo启动错误
+Question:
+> org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.<init>(ReferenceAnnotationBeanPostProcessor.java:106)
 >
->https://github.com/alibaba/spring-cloud-alibaba/issues/2310
+> https://github.com/alibaba/spring-cloud-alibaba/issues/2310
 
-解决方法
+Answer:
 ```xml
+<!-- 增加依赖 -->
 <dependency>
     <groupId>com.alibaba.spring</groupId>
     <artifactId>spring-context-support</artifactId>
